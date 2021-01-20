@@ -10,6 +10,7 @@
 
     </div>
     <script>
+        /*
         function funkcjaA() {
             //setTimeout(()=>{},1000);
             //setTimeout(function(){});
@@ -24,7 +25,19 @@
 
         const a = funkcjaA();
         funkcjaB(a);
+        */
 
+        function funkcjaA() {
+            setTimeout(()=>{
+                return document.getElementById("wynik").innerHTML += "<br>2: Lubi programować";
+            },1000);
+        }
+        function funkcjaB(callback) {
+            document.getElementById("wynik").innerHTML += "<br>1: 2CTG";
+        }
+
+        funkcjaA();
+        funkcjaB();
     </script>
     
 </body>
